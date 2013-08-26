@@ -8,6 +8,17 @@ Requirements
 * virtualenv
 * pip
 
+Add Config
+--
+```
+[bitly]
+username: yourusername
+password: notmypassword
+host = https://api-ssl.bitly.com
+
+[geonames]
+host = http://api.geonames.org
+```
 
 Install
 --
