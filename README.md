@@ -10,6 +10,7 @@ Requirements
 
 Add Config
 --
+Add 'features/config.ini' with the following contents:
 ```
 [bitly]
 username: yourusername
