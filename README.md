@@ -1,7 +1,7 @@
-bdd-api-lettuce
+api-bdd-tests
 ==
 
-An example of testing an HTTP-based API using the BDD style
+An example of testing HTTP-based APIs using the BDD principles 
 
 Requirements
 --
