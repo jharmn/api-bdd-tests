@@ -6,7 +6,7 @@ from nose.tools import *
 @step(u'I use the (.*) host')
 def use_the_host(step, provider):
   world.provider = provider
-  world.host = world.config.get(provider, 'host')
+  world.host = world.cfg('host')
 
 @step(u'I access the resource url "(.*)"')
 def access_the_resource_url(step, base_url):
@@ -14,9 +14,9 @@ def access_the_resource_url(step, base_url):
 
 @step(u'I provide authentication credentials')
 def provide_authorization_credentials(step):
-  username = world.config.get(world.provider, "username")
+  username = world.cfg("username")
   assert username is not None
-  password = world.config.get(world.provider, "password")
+  password = world.cfg("password")
   assert password is not None
   world.auth = HTTPBasicAuth(username, password)
 
