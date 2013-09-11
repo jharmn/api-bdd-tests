@@ -10,15 +10,16 @@ Requirements
 
 Add Config
 --
-Add 'features/config.ini' with the following contents:
+Add 'config.ini' with the following contents:
 ```
 [bitly]
-username: yourusername
-password: notmypassword
+username = yourusername
+password = notmypassword
 host = https://api-ssl.bitly.com
 
 [geonames]
 host = http://api.geonames.org
+username = yourusername
 ```
 
 Install
