@@ -1,7 +1,6 @@
 from lettuce import *
 import requests
 from requests.auth import HTTPBasicAuth
-from nose.tools import *
 
 @step(u'I use the (.*) host')
 def use_the_host(step, provider):
