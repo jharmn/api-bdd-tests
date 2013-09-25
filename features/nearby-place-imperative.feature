@@ -5,17 +5,22 @@ Scenario: Get nearby place name
 	Given I use the geonames host
 	When I access the resource url "/findNearbyPlaceNameJSON"
         And I provide parameter "username" as "jharmon"
-        And I provide parameter "lat" as "30.4754724"
-        And I provide parameter "lng" as "-98.1564068"
+        And I provide parameter "lat" as "<lat>"
+        And I provide parameter "lng" as "<long>"
 	And I retrieve the JSON results
 	Then the status code should be 200
 	And it should have a list "geonames"
 	And the list should have at least 1 item
-	And the list should have the field "countryId" containing the value "6252001"
-	And the list should have the field "toponymName" containing the value "Spicewood"
+	And the list should have the field "countryId" containing the value "<countryId>"
+	And the list should have the field "toponymName" containing the value "<toponymName>"
+Examples:
+	| lat		| long		| countryId 	| toponymName 	|
+	| 30.4754724	| -98.1564068	| 6252001	| Spicewood	|
+	| 34.134103	| -118.321694	| 6252001	| Universal City|
+	| 48.85815	| 2.29452	| 3017382	| Invalides	|
 
 @Negative @Get @User
-Scenario: Invalid username
+Scenario: Invalid username does not work
 	Given I use the geonames host
 	When I access the resource url "/findNearbyPlaceNameJSON"
         And I provide parameter "username" as "fdafdafdfdafda"
