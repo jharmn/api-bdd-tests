@@ -17,7 +17,7 @@ Examples:
 	| lat		| long		| countryId 	| toponymName 	|
 	| 30.4754724	| -98.1564068	| 6252001	| Spicewood	|
 	| 34.134103	| -118.321694	| 6252001	| Universal City|
-	| 48.85815	| 2.29452	| 3017382	| Invalides	|
+	| 48.85815	| 2.29452	| 3017382	| Paris 10 Ancien - Quartier Invalides	|
 
 @Negative @Get @User
 Scenario: Invalid username does not work
