@@ -11,7 +11,7 @@ Scenario: Get access token
 
 @Positive @User @Bitly
 Scenario: Get user info
-	Given i use the bitly host
+	Given I use the bitly host
 	When I access the resource url "/v3/user/info"
 	And I provide parameter "access_token" as the value "access_token"
 	And I retrieve the JSON results
